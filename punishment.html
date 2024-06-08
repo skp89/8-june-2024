@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are wrong !</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 200px;
+            /* Set the width according to your design */
+        }
+
+        button {
+            margin-top: 20px;
+
+        }
+        button {
+            background-color: #ff9999;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+
+<body>
+   babe
+    <br>
+    how can you forget this
+    <br>
+    think again and again
+    <br>
+    Now Say I Love You 5 Times as a punishment
+    <br>
+
+
+    <h2> 1: Type 'I Love You'</h2>
+    <input type="text" id="input1" placeholder="type" />
+    <br>
+
+    <h2> 2: Type 'I Love You'</h2>
+    <input type="text" id="input2" placeholder="type" />
+    <br>
+
+    <h2> 3: Type 'I Love You'</h2>
+    <input type="text" id="input3" placeholder="type" />
+    <br>
+
+    <h2> 4: Type 'I Love You'</h2>
+    <input type="text" id="input4" placeholder="type" />
+    <br>
+
+    <h2> 5: Type 'I Love You'</h2>
+    <input type="text" id="input5" placeholder="type" />
+    <br>
+
+    <button id="submitQuiz" onclick="submitQuiz()">Next</button>
+
+
+
+
+    <script>
+        function submitQuiz() {
+            // Check if 'I Love You' is typed in all inputs
+            var input1Value = document.getElementById("input1").value;
+            // Repeat for other inputs
+
+            if (input1Value === 'I Love You' /* && Repeat for other inputs */) {
+                // If 'I Love You' is typed in all inputs, open a new window
+                window.open('index.html', target="_self");
+            } else {
+                // If not all inputs have 'I Love You', you can display an alert or take other actions
+                alert('Please type "I Love You" in all inputs ');
+            }
+        }
+    </script>
+</body>
+
+</html>

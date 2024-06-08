@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Website for My GF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="login-container">
+        <h1>Welcome!</h1>
+        <form onsubmit="return login(event)">
+            <input type="text" id="username" placeholder="Username" required><br><br>
+            <input type="password" id="password" placeholder="Password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="app" style="display:none;">
+        <div id="home" class="page">
+            <h1>Welcome to My Love Page!</h1>
+            <p>Are you ready for some fun?</p>
+            <button onclick="start()">Start</button>
+        </div>
+
+        <div id="question1" class="page hidden">
+            <h2>Question 1</h2>
+            <p>How many gifts have I given to you?</p>
+            <div class="options">
+                <input type="radio" id="option1" name="gifts" value="10" onclick="chooseOption('question1', '10')">
+                <label for="option1" class="option">10</label>
+
+                <input type="radio" id="option2" name="gifts" value="13" onclick="chooseOption('question1', '13')">
+                <label for="option2" class="option">13</label>
+
+                <input type="radio" id="option3" name="gifts" value="7" onclick="chooseOption('question1', '7')">
+                <label for="option3" class="option">7</label>
+
+                <input type="radio" id="option4" name="gifts" value="26" onclick="chooseOption('question1', '26')">
+                <label for="option4" class="option">26</label>
+            </div>
+            <button onclick="nextQuestion('question1', 'question2')">Submit</button>
+        </div>
+
+
+
+        <div id="question2" class="page hidden">
+            <h2>Question 2</h2>
+            <p>How much do you love me?</p>
+            <input type="text" id="answer2">
+            <button onclick="nextQuestion('question2', 'question3')">Next</button>
+        </div>
+
+        <div id="question3" class="page hidden">
+            <h2>Question 3</h2>
+            <p>Where did we go on your birthday?</p>
+            <input type="text" id="answer3">
+            <button onclick="evaluateAnswers()">Submit</button>
+        </div>
+
+        <div id="final" class="page hidden">
+            <h2>Results</h2>
+            <div id="results"></div>
+            <div id="iLoveYouSection" class="hidden">
+                <h3>
+                    <p>Please Take screenshot and send it to me</p>
+                </h3>
+<br><br>
+                
+            </div>
+
+            <div class="myans">
+                <h2>answers are : </h2>
+                <p>Question 1: How many gifts have I given to you?</p>
+                <p>ans:13</p>
+                <p>Question 2: How much do you love me?</p>
+                <p>ans: it depends on you.(send ss)</p>
+                <p>Question 3: Where did we go on your birthday?</p>
+                <p>ans: Dadar</p>
+            </div>
+
+            <br><br>
+            <p id="change"></p>
+            <button id="punishBtn" class="hidden" onclick="punish()">Punish me</button>
+            <button id="correctBtn" class="hidden" onclick="correct()">Next</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
